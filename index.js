@@ -34,6 +34,7 @@ function renderHTML(data){
 // new XMLHttpRequest()
 // request.open("GET", url)
 // request.onload
+// request.send(); 
 // JSON.parse(request.responseText)
 // renderHTML(data) - creates string and renders data as HTML
 // container.insertAdjacentHTML("beforeend", htmlString)
