@@ -1,0 +1,17 @@
+.center{
+    text-align: center; 
+    font-family: sans-serif; 
+    font-size: 40px; 
+}
+#nav-bar{
+    background-color: aliceblue; 
+    padding: 20px; 
+    margin: 20px; 
+    position: fixed; 
+    float: left; 
+}
+#nav{
+    font-family: sans-serif; 
+    font-size: 20px; 
+    margin: 10px;
+}

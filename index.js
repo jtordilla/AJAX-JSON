@@ -2,6 +2,7 @@ var pageCounter = 1;
 
 var friendContainer = document.getElementById("friends"); 
 var btn = document.getElementById("clicker"); 
+progress = document.querySelector("#progress-bar"); 
 
 btn.addEventListener("click", function(){
     var ourRequest = new XMLHttpRequest(); 
@@ -12,8 +13,13 @@ btn.addEventListener("click", function(){
     }; 
     ourRequest.send(); 
     pageCounter++; 
-    if(pageCounter > 3){
+    if(pageCounter == 2){
+        progress.value = "33"; 
+    }else if(pageCounter == 3){
+        progress.value = "66"; 
+    }else if(pageCounter > 3){
         btn.style.display = "none"; 
+        progress.value = "100"; 
     }
 }); 
 
@@ -24,3 +30,10 @@ function renderHTML(data){
     }
     friendContainer.insertAdjacentHTML("beforeend", htmlString); 
 }; 
+
+// new XMLHttpRequest()
+// request.open("GET", url)
+// request.onload
+// JSON.parse(request.responseText)
+// renderHTML(data) - creates string and renders data as HTML
+// container.insertAdjacentHTML("beforeend", htmlString)
